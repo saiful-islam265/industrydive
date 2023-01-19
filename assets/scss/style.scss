@@ -1,0 +1,35 @@
+@charset "UTF-8";
+/*
+Theme Name: Industry Dive
+Theme URI: https://github.com/saiful-islam265/industrydive
+Author: industrydive
+Author URI: https://www.industrydive.com/
+Description: A clean & lightweight theme for industry dive assignment
+Requires at least: 5.3
+Tested up to: 6.1.1
+Requires PHP: 7.0
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: industrydive
+Tags: blog, one-column, two-columns, three-columns, accessibility-ready, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, block-patterns, rtl-language-support, sticky-post, theme-options, threaded-comments
+*/
+
+/*--------------------------------------------------------------
+# Variables
+--------------------------------------------------------------*/
+$primary-color: #009791;
+$secondary-color: #333e47;
+$overlay-color: rgba(0, 0, 0, 0.4);
+$text-color: #5a5a5a;
+$white: #ffffff;
+
+$heading-font: "Khand", sans-serif;
+$body-font: "Invention", sans-serif;
+
+@import 'fonts';
+@import 'general';
+@import 'header';
+@import 'subscription';
+@import 'post';
+@import 'footer';

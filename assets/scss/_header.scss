@@ -1,0 +1,173 @@
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+.site-header{
+    background-color: $white;
+    min-height: 134px;
+}
+
+.top-header{
+    padding-top: 32px;
+}
+.search-form{
+    position: relative;
+    [type=search]{
+        background-color: #ececec;
+        font-size: 1.9rem;
+        border: 1px solid transparent;
+        line-height: 26px;
+        padding: 7px 16px 7px 60px;
+        border-radius: 21px;
+        &:focus{
+            border-color: $primary-color;
+        }
+    }
+    .dashicons{
+        position: absolute;
+        left: 30px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+.site-branding{
+    display: inline-block;
+    vertical-align: middle;
+}
+.site-title{
+    text-transform: uppercase;
+    margin: 0;
+    font-size: 3.5rem;
+    letter-spacing: 6px;
+}
+.site-tagline{
+    font-family: $body-font;
+    font-size: 1.9rem;
+    margin: 0;
+}
+
+.navbar-nav{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li{
+        display: inline-block;
+        a{
+            color: $text-color;
+            font-size: 2.1rem;
+            padding: 30px 27px;
+            display: block;
+        }
+        &:hover{
+            a{
+                color: $primary-color;
+            }
+        }
+    }
+}
+
+.site-navbar{
+    z-index: 900;
+    background-color: $white;
+    &.affix{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        .logged-in.admin-bar &{
+            top: 32px;
+        }
+    }
+    .header-search{
+        margin: 8px 0;
+    }
+    .search-form {
+        [type=search]{
+            width: 100%;
+        }
+    }
+    .btn{
+        width: 100%;
+        margin: 8px 0;
+    }
+}
+
+@media screen and (max-width: 1023.98px){
+    body{
+        margin-top: 74px;
+    }
+    .site-header{
+        position: fixed;
+        z-index: 900;
+        left: 0;
+        right: 0;
+        top: 0;
+        min-height: 0;
+        .logged-in.admin-bar &{
+            top: 32px;
+        }
+        .top-header{
+            padding: 16px 0;
+            min-height: 74px;
+        }
+        .site-title{
+            font-size: 2.4rem;
+            line-height: 1;
+        }
+        .site-tagline{
+            font-size: 1.6rem;
+            line-height: 1;
+        }
+    }
+    .site-navbar{
+        display: none;
+        border-top: 1px solid rgba(black, 0.12);
+        &.affix{
+            position: static;
+        }
+    }
+    .navbar-nav {
+        li{
+            display: block;
+            a{
+                text-align: left;
+                padding: 8px 15px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 782px){
+    .site-header{
+        .logged-in.admin-bar &{
+            top: 46px;
+        }
+    }
+}
+
+@media screen and (max-width: 767.98px){
+    .top-header{
+        .col-6{
+            width: 50%;
+        }
+    }
+}
+
+@media screen and (max-width: 600px){
+    .site-header{
+        position: absolute;
+        .site-title{
+            font-size: 1.8rem;
+        }
+        .site-tagline{
+            font-size: 1.4rem;
+        }
+    }
+    .top-header .col-6{
+        &.text-sm-left{
+            width: 70%;
+        }
+        &.sm-d-block{
+            width: 30%;
+        }
+    }
+}
